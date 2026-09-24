@@ -30,7 +30,8 @@ For further details on what has changed see the [CHANGELOG](https://github.com/m
 
 | Plugin | For Capacitor | Docs                                                                                      | Notes                                                         |
 |--------|---------------|-------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| 7.x    | 7.x.x         | [README](./README.md)                                                                     | Breaking changes see Changelog.                               |
+| 8.x    | 8.x.x         | [README](./README.md)                                                                     | ContinuumCloud vendored copy: Capacitor 8 and SPM support, CaredFor Android patches. Not published upstream. |
+| 7.x    | 7.x.x         | [README](https://github.com/moberwasserlechner/capacitor-filesharer/blob/7.0.0/README.md) | Breaking changes see Changelog.                               |
 | 6.x    | 6.x.x         | [README](https://github.com/moberwasserlechner/capacitor-filesharer/blob/6.0.0/README.md) | Breaking changes see Changelog.                               |
 
 ## Configuration

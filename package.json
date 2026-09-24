@@ -1,6 +1,6 @@
 {
   "name": "@byteowls/capacitor-filesharer",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "description": "Capacitor plugin to download and share files for the Web, Android and iOS",
   "author": "Michael Oberwasserlechner",
   "homepage": "https://github.com/moberwasserlechner/capacitor-filesharer",
@@ -26,7 +26,8 @@
     "android/build.gradle",
     "dist/",
     "ios/ByteowlsCapacitorFilesharer/Source",
-    "ByteowlsCapacitorFilesharer.podspec"
+    "ByteowlsCapacitorFilesharer.podspec",
+    "Package.swift"
   ],
   "keywords": [
     "capacitor",
@@ -54,15 +55,15 @@
     "access": "public"
   },
   "peerDependencies": {
-    "@capacitor/core": ">=7.0.0"
+    "@capacitor/core": ">=8.0.0"
   },
   "dependencies": {
     "file-saver": "2.0.5"
   },
   "devDependencies": {
-    "@capacitor/android": "^7.0.0",
-    "@capacitor/core": "^7.0.0",
-    "@capacitor/ios": "^7.0.0",
+    "@capacitor/android": "^8.0.0",
+    "@capacitor/core": "^8.0.0",
+    "@capacitor/ios": "^8.0.0",
     "@types/file-saver": "2.0.7",
     "@types/jest": "30.0.0",
     "eslint": "9.7.0",
