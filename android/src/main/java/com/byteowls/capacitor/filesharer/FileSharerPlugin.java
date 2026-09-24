@@ -1,6 +1,7 @@
 package com.byteowls.capacitor.filesharer;
 
 import android.app.Activity;
+import android.content.ClipData;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.LabeledIntent;
@@ -123,6 +124,7 @@ public class FileSharerPlugin extends Plugin {
 //            sendIntent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
             sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
             sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            sendIntent.setClipData(ClipData.newRawUri("", contentUri));
 
             List<LabeledIntent> intentList = new ArrayList<>();
 
@@ -184,11 +186,15 @@ public class FileSharerPlugin extends Plugin {
 
     @ActivityCallback
     private void callbackComplete(PluginCall call, ActivityResult result) {
-        if (result.getResultCode() == Activity.RESULT_CANCELED) {
-            call.reject(USER_CANCELLED);
-        } else {
-            call = this.bridge.getSavedCall(this.callbackId);
-            call.resolve();
-        }
+//      Currently, the result always return RESULT_CANCELED, even when the share was not cancelled.
+//      TODO: figure out why the result is always returned as cancelled.
+//         if (result.getResultCode() == Activity.RESULT_CANCELED) {
+//             call.reject(USER_CANCELLED);
+//         } else {
+//             call = this.bridge.getSavedCall(this.callbackId);
+//             call.resolve();
+//         }
+        call = this.bridge.getSavedCall(this.callbackId);
+        call.resolve();
     }
 }
